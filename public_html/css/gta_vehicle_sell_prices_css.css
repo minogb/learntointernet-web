@@ -1,0 +1,32 @@
+
+#upperText{
+	width:100%; 
+	background-color: rgba(0,0,0,0.8);
+}
+#lowerText{
+	margin-top: 146px;
+	width:100%; 
+	background-color: rgba(0,0,0,0.8);
+}
+#text{
+	margin-left:5px;
+	color: white;
+}
+#car{
+	 width: 300px;
+	 height: 182px;
+	 float:left;
+	 margin-left:10px;
+	 margin-top:10px;
+	 background-size: 100% 100%; 
+}
+#body{
+	width:100%;
+	height:auto;
+	min-height:100%;
+}
+#hiddenDiv{
+	width: 640px;
+	height: 360px;
+	position: absolute;
+}

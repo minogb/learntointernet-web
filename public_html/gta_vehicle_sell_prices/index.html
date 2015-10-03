@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>LEARN!</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="text/css" rel="stylesheet" href="http://www.learntointernet.com/css/generalcss.css">
+        <link type="text/css" rel="stylesheet" href="http://www.learntointernet.com/css/gta_vehicle_sell_prices_css.css">
+		<script>
+				function onMouseOver(currentDiv){
+					var style = getComputedStyle(currentDiv);
+					var image = style.getPropertyValue("background-image");
+					image = image.substring(4, image.length-1);
+					document.getElementById("hiddenDiv").innerHTML = "<img style=\"width:100%; height: 100%;\" src=\"" + image + "\">";
+					var posx = 0;
+					var posy = 0;
+					var e = window.event;
+					if(e.pageX || e.pageY)
+					{
+						posx = e.pageX;
+						posy = e.pageY;
+					}else if(e.clientX || e.clientY){
+						posx = e.clientX;
+						posy = e.clientY;
+					}
+					
+					document.getElementById("hiddenDiv").style.display = '';
+					document.getElementById("hiddenDiv").style.left = posx + 'px';
+					document.getElementById("hiddenDiv").style.top = posy + "px";
+				}
+				function hideOnMouseOut(){
+					document.getElementById("hiddenDiv").style.left = 0 + "px";
+					document.getElementById("hiddenDiv").style.top = 0 + "px";
+					document.getElementById("hiddenDiv").innerHTML = "";
+					document.getElementById("hiddenDiv").style.display = 'none';
+				}
+		</script>
+	</head>
+    <body>
+        <div id="hiddenDiv">
+		</div>
+        <div id="content">
+            <div id="page">
+                <div id ="header">
+                    <a href="/">
+                        <div id="logoDiv">
+                            <img src="http://www.learntointernet.com/img/FryedManLogoSmall.png" alt="FryedMan" id="logo">
+                        </div>
+                    </a>
+                    <a href="/">
+                        <div id="title">
+                            <div id="titleText">
+                                Learn To Internet . com
+                            </div>
+                        </div>
+                    </a>
+                    <div id="hotbarDiv">
+                        <div id="hotbar">
+                            <a href="/">
+                                <div class="hotbarItem">
+                                    <div id="hotbarText">
+                                        Home
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="/index">
+                                <div class="hotbarItem">
+                                    <div id="hotbarText">
+                                        Index
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="/info">
+                                <div class="hotbarItem">
+                                    <div id="hotbarText">
+                                        Info
+                                    </div>
+                                </div>
+                            </a>
+                            <a href="/enhanced">
+                                <div class="hotbarItem">
+                                    <div id="hotbarText">
+                                        Enhanced
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div id="body">
+					<div onmouseover="onMouseOver(this)" onmouseout="hideOnMouseOut()" id="car" style="background-image: url(http://vignette1.wikia.nocookie.net/gtawiki/images/e/e0/FelonGT-GTAV-Front.png);" >
+						  <div id="upperText">
+							<div id="text">
+								Lampadati - Felon GT
+							</div>
+						  </div>
+						  <div id="lowerText">
+							<div id="text">
+								$9,500
+							</div>
+						  </div>
+					</div>
+					
+					<div id="car" onmouseover="onMouseOver(this)" onmouseout="hideOnMouseOut()" style="background-image: url(http://vignette1.wikia.nocookie.net/gtawiki/images/f/f7/Sentinel-GTAV-Front.png);" >
+						  <div id="upperText">
+							<div id="text">
+								Ubermacht - Sentinel
+							</div>
+						  </div>
+						  <div id="lowerText">
+							<div id="text">
+								$9,500
+							</div>
+						  </div>
+					</div>
+					
+					<div id="car" onmouseover="onMouseOver(this)" onmouseout="hideOnMouseOut()" style="background-image: url(http://vignette3.wikia.nocookie.net/gtawiki/images/3/38/GallivanterBaller1stGen-GTAV-Front.png);" >
+						  <div id="upperText">
+							<div id="text">
+								Ballivanter - Baller
+							</div>
+						  </div>
+						  <div id="lowerText">
+							<div id="text">
+								$9,000
+							</div>
+						  </div>
+					</div>
+					
+					<div id="car" onmouseover="onMouseOver(this)" onmouseout="hideOnMouseOut()" style="background-image: url(http://vignette3.wikia.nocookie.net/gtawiki/images/1/10/Felon-GTAV-Front.png);" >
+						  <div id="upperText">
+							<div id="text">
+								Lampadati - Felon
+							</div>
+						  </div>
+						  <div id="lowerText">
+							<div id="text">
+								$9,000
+							</div>
+						  </div>
+					</div>
+					
+					<div id="car" onmouseover="onMouseOver(this)" onmouseout="hideOnMouseOut()" style="background-image: url(http://vignette2.wikia.nocookie.net/gtawiki/images/5/5a/MerryweatherMesa-GTAV-front.png);" >
+						  <div id="upperText">
+							<div id="text">
+								Canis - Mesa
+							</div>
+						  </div>
+						  <div id="lowerText">
+							<div id="text">
+								$8,500
+							</div>
+						  </div>
+					</div>
+					
+					<div id="car" onmouseover="onMouseOver(this)" onmouseout="hideOnMouseOut()" style="background-image: url(http://vignette1.wikia.nocookie.net/gtawiki/images/7/75/Rocoto-GTAV-Front.png);" >
+						  <div id="upperText">
+							<div id="text">
+								Obey - Rocoto
+							</div>
+						  </div>
+						  <div id="lowerText">
+							<div id="text">
+								$8,500
+							</div>
+						  </div>
+					</div>
+					
+					<div id="car" onmouseover="onMouseOver(this)" onmouseout="hideOnMouseOut()" style="background-image: url(http://vignette4.wikia.nocookie.net/gtawiki/images/a/a4/Oracle-GTAV-front.png);" >
+						  <div id="upperText">
+							<div id="text">
+								Ubermacht - Oracle XS
+							</div>
+						  </div>
+						  <div id="lowerText">
+							<div id="text">
+								$8,200
+							</div>
+						  </div>
+					</div>
+					
+					<div id="car" onmouseover="onMouseOver(this)" onmouseout="hideOnMouseOut()" style="background-image: url(http://vignette4.wikia.nocookie.net/gtawiki/images/a/a4/Oracle-GTAV-front.png);" >
+						  <div id="upperText">
+							<div id="text">
+								Ubermacht - Oracle
+							</div>
+						  </div>
+						  <div id="lowerText">
+							<div id="text">
+								$8,000
+							</div>
+						  </div>
+					</div>
+					
+					<div id="car" onmouseover="onMouseOver(this)" onmouseout="hideOnMouseOut()" style="background-image: url(http://vignette2.wikia.nocookie.net/gtawiki/images/f/ff/Schwartzer-GTAV-front.png);" >
+						  <div id="upperText">
+							<div id="text">
+								Benefactor - Schwartzer
+							</div>
+						  </div>
+						  <div id="lowerText">
+							<div id="text">
+								$8,000
+							</div>
+						  </div>
+					</div>
+					
+					<div id="car" onmouseover="onMouseOver(this)" onmouseout="hideOnMouseOut()" style="background-image: url(http://vignette1.wikia.nocookie.net/gtawiki/images/d/d1/OcelotF620-Front-GTAV.png);" >
+						  <div id="upperText">
+							<div id="text">
+								Ocelot - F620
+							</div>
+						  </div>
+						  <div id="lowerText">
+							<div id="text">
+								$8,000
+							</div>
+						  </div>
+					</div>
+					
+					<div id="car" onmouseover="onMouseOver(this)" onmouseout="hideOnMouseOut()" style="background-image: url(http://vignette4.wikia.nocookie.net/gtawiki/images/b/b5/AlbanyCavalcade1-Front-GTAV.png);" >
+						  <div id="upperText">
+							<div id="text">
+								Albany - Cavalcade
+							</div>
+						  </div>
+						  <div id="lowerText">
+							<div id="text">
+								$7,000
+							</div>
+						  </div>
+					</div>
+					
+					<div id="car" onmouseover="onMouseOver(this)" onmouseout="hideOnMouseOut()" style="background-image: url(http://vignette1.wikia.nocookie.net/gtawiki/images/e/eb/Dubsta-GTAV-Front.png);" >
+						  <div id="upperText">
+							<div id="text">
+								Benefactor - Dubsta
+							</div>
+						  </div>
+						  <div id="lowerText">
+							<div id="text">
+								$7,000
+							</div>
+						  </div>
+					</div>
+					
+					<div id="car" onmouseover="onMouseOver(this)" onmouseout="hideOnMouseOut()" style="background-image: url(http://vignette2.wikia.nocookie.net/gtawiki/images/1/1b/Schafter-GTAV-Front.png);" >
+						  <div id="upperText">
+							<div id="text">
+								Benefactor - Schafter
+							</div>
+						  </div>
+						  <div id="lowerText">
+							<div id="text">
+								$6,500
+							</div>
+						  </div>
+					</div>
+					
+					<div id="car" onmouseover="onMouseOver(this)" onmouseout="hideOnMouseOut()" style="background-image: url(http://vignette1.wikia.nocookie.net/gtawiki/images/0/02/Zion_front_down.jpg);" >
+						  <div id="upperText">
+							<div id="text">
+								Ubermacht - Zion Cabrio
+							</div>
+						  </div>
+						  <div id="lowerText">
+							<div id="text">
+								$6,500
+							</div>
+						  </div>
+					</div>
+					
+					<div id="car" onmouseover="onMouseOver(this)" onmouseout="hideOnMouseOut()" style="background-image: url(http://vignette1.wikia.nocookie.net/gtawiki/images/e/ed/%C3%9CbermachtZionXS-Front-GTAV.png);" >
+						  <div id="upperText">
+							<div id="text">
+								Ubermacht - Zion
+							</div>
+						  </div>
+						  <div id="lowerText">
+							<div id="text">
+								$6,200
+							</div>
+						  </div>
+					</div>
+					
+					<div id="car" onmouseover="onMouseOver(this)" onmouseout="hideOnMouseOut()" style="background-image: url(http://vignette2.wikia.nocookie.net/gtawiki/images/1/1c/BenefactorSerrano-Front-GTAV.png);" >
+						  <div id="upperText">
+							<div id="text">
+								Benefactor - Serrano
+							</div>
+						  </div>
+						  <div id="lowerText">
+							<div id="text">
+								$6,000
+							</div>
+						  </div>
+					</div>
+					
+					<div id="car" onmouseover="onMouseOver(this)" onmouseout="hideOnMouseOut()" style="background-image: url(http://vignette3.wikia.nocookie.net/gtawiki/images/f/f0/OcelotJackal-GTAV-Front.png);" >
+						  <div id="upperText">
+							<div id="text">
+								Ocelot - Jackal
+							</div>
+						  </div>
+						  <div id="lowerText">
+							<div id="text">
+								$6,000
+							</div>
+						  </div>
+					</div>
+					
+					<div id="car" onmouseover="onMouseOver(this)" onmouseout="hideOnMouseOut()" style="background-image: url(http://vignette1.wikia.nocookie.net/gtawiki/images/4/4c/SentinelXS-GTA5-Front.png);" >
+						  <div id="upperText">
+							<div id="text">
+								Ubermacht - Sentinel XS
+							</div>
+						  </div>
+						  <div id="lowerText">
+							<div id="text">
+								$6,000
+							</div>
+						  </div>
+					</div>
+					
+					<div id="car" onmouseover="onMouseOver(this)" onmouseout="hideOnMouseOut()" style="background-image: url(http://vignette4.wikia.nocookie.net/gtawiki/images/1/1b/Landstalker-GTAV-Front.png);" >
+						  <div id="upperText">
+							<div id="text">
+								Dundreary - Landstalker
+							</div>
+						  </div>
+						  <div id="lowerText">
+							<div id="text">
+								$5,800
+							</div>
+						  </div>
+					</div>
+					
+					<div id="car" onmouseover="onMouseOver(this)" onmouseout="hideOnMouseOut()" style="background-image: url(http://vignette1.wikia.nocookie.net/gtawiki/images/e/e1/Tailgater-GTAV-front.png);" >
+						  <div id="upperText">
+							<div id="text">
+								Obey - Tailgater
+							</div>
+						  </div>
+						  <div id="lowerText">
+							<div id="text">
+								$5,500
+							</div>
+						  </div>
+					</div>
+					
+					<div id="car" onmouseover="onMouseOver(this)" onmouseout="hideOnMouseOut()" style="background-image: url(http://vignette1.wikia.nocookie.net/gtawiki/images/e/e6/FathomFQ2-Front-GTAV.png);" >
+						  <div id="upperText">
+							<div id="text">
+								Fathom FQ 2
+							</div>
+						  </div>
+						  <div id="lowerText">
+							<div id="text">
+								$5,000
+							</div>
+						  </div>
+					</div>
+					
+					<div id="car" onmouseover="onMouseOver(this)" onmouseout="hideOnMouseOut()" style="background-image: url(http://vignette1.wikia.nocookie.net/gtawiki/images/1/11/MammothPatriot-Front-GTAV.png);" >
+						  <div id="upperText">
+							<div id="text">
+								Mammoth - Patriot
+							</div>
+						  </div>
+						  <div id="lowerText">
+							<div id="text">
+								$5,000
+							</div>
+						  </div>
+					</div>
+					
+					<div id="car" onmouseover="onMouseOver(this)" onmouseout="hideOnMouseOut()" style="background-image: url();" >
+						  <div id="upperText">
+							<div id="text">
+								Benefactor - Schafter
+							</div>
+						  </div>
+						  <div id="lowerText">
+							<div id="text">
+								$6,500
+							</div>
+						  </div>
+					</div>
+					
+                </div>
+                <div id="footer">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
