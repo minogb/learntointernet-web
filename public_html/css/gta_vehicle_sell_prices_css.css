@@ -30,3 +30,10 @@
 	height: 360px;
 	position: absolute;
 }
+#timmer{
+	width: 640px;
+	height: 360px;
+        margin: 5px;
+        background-color: #00C42E;
+        font-size: 50px;
+}

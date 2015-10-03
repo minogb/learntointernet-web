@@ -50,11 +50,13 @@
                                     fill += ":";
                                     fill += remaingSeconds % 60 > 0 ? (remaingSeconds < 9 ? "0" + remaingSeconds : remaingSeconds) : "00";
                                     document.getElementById("timmer").innerHTML = fill;
+                                    document.getElementById("timmer").style.background-color = "#BF0046";
                                 }
                                 function endTimmer(){
                                     clearInterval(longTimmer);
                                     clearInterval(secondsCounter);
                                     document.getElementById("timmer").innerHTML = "SELL CAR NOW";
+                                    document.getElementById("timmer").style.background-color = "#00C42E";
                                 }
 		</script>
 	</head>
@@ -111,7 +113,7 @@
                 </div>
                 <div id="body">
                                         <div id ="timmer" onclick="onTimmerButtonPress()">
-                                            45:00
+                                            Sell Car Timer
                                         </div>
 					<div onmouseover="onMouseOver(this)" onmouseout="hideOnMouseOut()" id="car" style="background-image: url(http://vignette1.wikia.nocookie.net/gtawiki/images/e/e0/FelonGT-GTAV-Front.png);" >
 						  <div id="upperText">
