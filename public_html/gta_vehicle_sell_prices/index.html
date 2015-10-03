@@ -39,24 +39,33 @@
                                 var maxMilliTime = 2700000;
                                 var currentSeconds = 0;
                                 function onTimmerButtonPress(){
-                                    longTimmer = setTimeout(endTimmer,maxMilliTime);
-                                    secondsCounter = setTimeout(1000);
+                                    clearInterval(longTimmer);
+                                    clearInterval(secondsCounter);
+								
+                                    document.getElementById("timmerText").innerHTML = "45:00";
+                                    document.getElementById("timmer").style.backgroundColor = "#8F0000";
+                                    secondsCounter = setInterval(timmerTick, 1000);
+                                    longTimmer = setInterval(endTimmer, maxMilliTime);
                                 }
                                 function timmerTick(){
                                     currentSeconds++;
                                     remaingSeconds = 2700 - currentSeconds;
                                     var minutes = remaingSeconds / 60;
+									minutes = Math.trunc(minutes);
+									remaingSeconds = remaingSeconds % 60;
+									remaingSeconds = Math.trunc(remaingSeconds);
                                     var fill = minutes > 0 ? (minutes < 9 ? "0" + minutes : minutes) : "00";
                                     fill += ":";
-                                    fill += remaingSeconds % 60 > 0 ? (remaingSeconds < 9 ? "0" + remaingSeconds : remaingSeconds) : "00";
-                                    document.getElementById("timmer").innerHTML = fill;
-                                    document.getElementById("timmer").style.background-color = "#BF0046";
+                                    fill += remaingSeconds > 0 ? (remaingSeconds < 9 ? "0" + remaingSeconds : remaingSeconds) : "00";
+                                    document.getElementById("timmerText").innerHTML = fill;
+                                    document.getElementById("timmer").style.backgroundColor = "#8F0000";
                                 }
                                 function endTimmer(){
                                     clearInterval(longTimmer);
                                     clearInterval(secondsCounter);
-                                    document.getElementById("timmer").innerHTML = "SELL CAR NOW";
-                                    document.getElementById("timmer").style.background-color = "#00C42E";
+									currentSeconds = 0;
+                                    document.getElementById("timmerText").innerHTML = "SELL CAR NOW";
+                                    document.getElementById("timmer").style.backgroundColor = "#00C42E";
                                 }
 		</script>
 	</head>
@@ -113,7 +122,9 @@
                 </div>
                 <div id="body">
                                         <div id ="timmer" onclick="onTimmerButtonPress()">
-                                            Sell Car Timer
+											<div id="timmerText">
+												Sell Car Timer
+											</div>
                                         </div>
 					<div onmouseover="onMouseOver(this)" onmouseout="hideOnMouseOut()" id="car" style="background-image: url(http://vignette1.wikia.nocookie.net/gtawiki/images/e/e0/FelonGT-GTAV-Front.png);" >
 						  <div id="upperText">
@@ -453,7 +464,7 @@
 						  </div>
 					</div>
 					
-					<div id="car" onmouseover="onMouseOver(this)" onmouseout="hideOnMouseOut()" style="background-image: url(gta.wikia.com/wiki/Fusilade?file=SchysterFusilade-Front-GTAV.png);" >
+					<div id="car" onmouseover="onMouseOver(this)" onmouseout="hideOnMouseOut()" style="background-image: url();" >
 						  <div id="upperText">
 							<div id="text">
 								Schyster - Fusilade

@@ -29,11 +29,17 @@
 	width: 640px;
 	height: 360px;
 	position: absolute;
+	display: none;
 }
 #timmer{
-	width: 640px;
-	height: 360px;
-        margin: 5px;
-        background-color: #00C42E;
-        font-size: 50px;
+	width: 320px;
+	height: 55px;
+	margin: 5px;
+	background-color: #00C42E;
+	font-size: 40px;
+}
+#timmerText{
+	margin-left: 10px;
+	margin-top: 5px;
+	float:left;
 }
