@@ -34,6 +34,28 @@
 					document.getElementById("hiddenDiv").innerHTML = "";
 					document.getElementById("hiddenDiv").style.display = 'none';
 				}
+                                var longTimmer;
+                                var secondsCounter;
+                                var maxMilliTime = 2700000;
+                                var currentSeconds = 0;
+                                function onTimmerButtonPress(){
+                                    longTimmer = setTimeout(endTimmer,maxMilliTime);
+                                    secondsCounter = setTimeout(1000);
+                                }
+                                function timmerTick(){
+                                    currentSeconds++;
+                                    remaingSeconds = 2700 - currentSeconds;
+                                    var minutes = remaingSeconds / 60;
+                                    var fill = minutes > 0 ? (minutes < 9 ? "0" + minutes : minutes) : "00";
+                                    fill += ":";
+                                    fill += remaingSeconds % 60 > 0 ? (remaingSeconds < 9 ? "0" + remaingSeconds : remaingSeconds) : "00";
+                                    document.getElementById("timmer").innerHTML = fill;
+                                }
+                                function endTimmer(){
+                                    clearInterval(longTimmer);
+                                    clearInterval(secondsCounter);
+                                    document.getElementById("timmer").innerHTML = "SELL CAR NOW";
+                                }
 		</script>
 	</head>
     <body>
@@ -88,6 +110,9 @@
                     </div>
                 </div>
                 <div id="body">
+                                        <div id ="timmer" onclick="onTimmerButtonPress()">
+                                            45:00
+                                        </div>
 					<div onmouseover="onMouseOver(this)" onmouseout="hideOnMouseOut()" id="car" style="background-image: url(http://vignette1.wikia.nocookie.net/gtawiki/images/e/e0/FelonGT-GTAV-Front.png);" >
 						  <div id="upperText">
 							<div id="text">
